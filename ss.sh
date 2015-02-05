@@ -15,5 +15,7 @@ do
   correct=true
  else
   echo "Oops!\nPlease enter again."
+  echo "Oops!\nPlease enter again."
+  echo "Oops!\nPlease enter again."
  fi
 done
