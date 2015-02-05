@@ -3,10 +3,12 @@
 #Time:2015.02.05 Thu.
 ans=0
 correct=false
+#while [ "$correct" != "true" ]
 until [ "$correct" == "true" ]
 do
  echo -e "what do you want to know?\n1.The logged of each user.\n2.The logged of each IP address or server address."
  read ans
+#The ans is correct or not.
  if [ "$ans" == 1 ]; then 
   last | awk '{print $1}' | sort | uniq -c | sort -n -r | awk -F " " 'NR==1 {print $2}i'
   correct=true
