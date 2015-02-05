@@ -5,9 +5,7 @@ ans=0
 correct=false
 until [ "$correct" == "true" ]
 do
- echo "what do you want to know?"
- echo "1.The logged of each user."
- echo "2.The logged of each IP address or server address."
+ echo -e "what do you want to know?\n1.The logged of each user.\n2.The logged of each IP address or server address."
  read ans
  if [ "$ans" == 1 ]; then 
   last | awk '{print $1}' | sort | uniq -c | sort -n
